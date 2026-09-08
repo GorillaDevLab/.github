@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">GorillaDevLab — Build wild.</title>
+  <desc id="desc">Animated neon laboratory: orbiting rings surround a geometric gorilla, code flows behind bold lettering, and light sweeps across an electric grid.</desc>
+  <style>
+    svg { max-width: 100%; height: auto; }
+    .orbit { animation: spin 12s linear infinite; }
+    .reverse { animation: spin 18s linear infinite reverse; }
+    .fast { animation: spin 6s linear infinite; }
+    .float { animation: float 4s cubic-bezier(.45,0,.55,1) infinite; }
+    .scan { animation: scan 4s linear infinite; }
+    .flow { animation: flow 12s linear infinite; }
+    .grid { animation: drift 3s linear infinite; }
+    .pulse { animation: pulse 3s ease-in-out infinite; }
+    .signal { animation: signal 2s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: bottom; }
+    .s2 { animation-delay: -.7s; } .s3 { animation-delay: -1.3s; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes float { 50% { transform: translateY(-16px) rotate(-3deg); } }
+    @keyframes scan { from { transform: translateX(-280px); } to { transform: translateX(1500px); } }
+    @keyframes flow { to { transform: translateY(-160px); } }
+    @keyframes drift { to { transform: translateX(40px); } }
+    @keyframes pulse { 50% { opacity: .35; } }
+    @keyframes signal { to { transform: scaleY(.25); } }
+    @media (prefers-reduced-motion: reduce) { .orbit,.reverse,.fast,.float,.scan,.flow,.grid,.pulse,.signal { animation: none; } .scan { opacity: 0; } }
+  </style>
+  <defs>
+    <linearGradient id="bg" x2="1200" y2="440" gradientUnits="userSpaceOnUse"><stop stop-color="#080E1D"/><stop offset=".55" stop-color="#10102B"/><stop offset="1" stop-color="#21123C"/></linearGradient>
+    <linearGradient id="neon" x2="640" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#93FF45"/><stop offset=".52" stop-color="#36FFE2"/><stop offset="1" stop-color="#80A5FF"/></linearGradient>
+    <linearGradient id="sweep"><stop stop-color="#63FFE4" stop-opacity="0"/><stop offset=".5" stop-color="#63FFE4" stop-opacity=".12"/><stop offset="1" stop-color="#63FFE4" stop-opacity="0"/></linearGradient>
+    <radialGradient id="aura"><stop stop-color="#8846FF" stop-opacity=".4"/><stop offset="1" stop-color="#8846FF" stop-opacity="0"/></radialGradient>
+    <pattern id="mesh" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" stroke="#6EE8FF" stroke-opacity=".09"/></pattern>
+    <pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0H4" stroke="#020614" stroke-opacity=".18"/></pattern>
+    <clipPath id="frame"><rect width="1200" height="440" rx="24"/></clipPath>
+    <clipPath id="code-window"><rect x="660" y="32" width="500" height="355"/></clipPath>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <g id="code" font-family="Consolas,monospace" font-size="13" fill="#7497C6">
+      <text x="690" y="50">const curiosity = Infinity;</text><text x="715" y="82">await lab.build(idea);</text><text x="680" y="114">git commit -m "make it real"</text><text x="730" y="146">while (true) { explore(); }</text><text x="700" y="178">return somethingDifferent;</text>
+    </g>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="440" fill="url(#bg)"/>
+    <g class="grid"><rect x="-40" width="1280" height="440" fill="url(#mesh)"/></g>
+    <ellipse cx="970" cy="210" rx="340" ry="300" fill="url(#aura)"/>
+    <g clip-path="url(#code-window)" opacity=".22"><g class="flow"><use href="#code"/><use href="#code" y="160"/><use href="#code" y="320"/></g></g>
+    <path d="M0 366H712L786 440M0 384H680L733 440M1200 350H1160L1070 440" stroke="#7665FF" stroke-opacity=".5"/>
+    <path d="M0 367H180" stroke="#9AFF54" stroke-width="2" class="pulse"/>
+    <rect class="scan" x="0" y="0" width="220" height="440" fill="url(#sweep)"/>
+    <g font-family="Segoe UI,Arial,sans-serif">
+      <rect x="52" y="40" width="162" height="28" rx="14" fill="#9AFF54"/>
+      <text x="67" y="59" fill="#0A1720" font-size="12" font-weight="800" letter-spacing="2">GORILLA DEV LAB</text>
+      <text x="233" y="59" fill="#A4ADC9" font-size="12" letter-spacing="3">EXPERIMENT / CREATE / REPEAT</text>
+      <text x="48" y="166" fill="#F3F5FF" font-size="92" font-weight="900" letter-spacing="-5">GorillaDevLab<tspan fill="#93FF45">.</tspan></text>
+      <text x="52" y="262" fill="url(#neon)" font-size="88" font-weight="900" letter-spacing="-4">BUILD WILD.</text>
+      <text x="56" y="306" fill="#C0C9E2" font-size="22" letter-spacing=".3">Big ideas. Bold experiments. Real software.</text>
+      <text x="56" y="410" fill="#8D9ABB" font-family="Consolas,monospace" font-size="13" letter-spacing="2">&gt; TURN CURIOSITY INTO CODE<tspan fill="#93FF45" class="pulse"> _</tspan></text>
+    </g>
+    <g transform="translate(964 214)">
+      <circle r="157" stroke="#A59AFF" stroke-opacity=".16"/>
+      <g class="orbit"><circle r="155" stroke="#A28AFF" stroke-width="2" stroke-dasharray="200 65 20 65"/><circle cx="155" r="5" fill="#CDBFFF" filter="url(#glow)"/></g>
+      <g class="reverse"><circle r="136" stroke="#37F7E1" stroke-width="5" stroke-dasharray="130 297"/><path d="M-144 0H-128M128 0H144M0-144V-128M0 128V144" stroke="#B1FFF2" stroke-width="2"/></g>
+      <g class="fast"><circle r="171" stroke="#80FF52" stroke-width="2" stroke-dasharray="5 85" stroke-opacity=".6"/></g>
+      <g class="float">
+        <path d="M-78-63L-46-91H46L78-63L94-16L78 55L38 90H-38L-78 55L-94-16Z" fill="#141D35" stroke="#A7FF61" stroke-width="3"/>
+        <path d="M-79-27L-97-39L-109-15L-96 18L-79 15M79-27L97-39L109-15L96 18L79 15" fill="#202B47" stroke="#A7FF61" stroke-width="3"/>
+        <path d="M-67-31L-40-49L0-33L40-49L67-31L57 7L27 18H-27L-57 7Z" fill="#354364"/>
+        <path d="M-60-18L-22-11M22-11L60-18" stroke="#85FFE1" stroke-width="7" filter="url(#glow)"/>
+        <path d="M-37 9L-51 30L-40 61L-19 75H19L40 61L51 30L37 9L18-1H-18Z" fill="#7786A8"/>
+        <path d="M-22 15L-15 6H15L22 15L14 28H-14Z" fill="#121A2B"/>
+        <path d="M-27 47H27M-14 58H14" stroke="#182038" stroke-width="5" stroke-linecap="round"/>
+        <path d="M-29-71H29" stroke="#739257" stroke-width="3"/>
+      </g>
+    </g>
+    <g fill="#93FF45"><rect class="signal" x="1096" y="396" width="5" height="15"/><rect class="signal s2" x="1107" y="388" width="5" height="23"/><rect class="signal s3" x="1118" y="380" width="5" height="31"/><rect class="signal" x="1129" y="390" width="5" height="21"/></g>
+    <rect width="1200" height="440" fill="url(#lines)" pointer-events="none"/>
+    <rect x="1" y="1" width="1198" height="438" rx="23" stroke="#645883" stroke-opacity=".6" stroke-width="2"/>
+  </g>
+</svg>
