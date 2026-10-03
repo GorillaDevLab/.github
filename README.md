@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="assets/kuchipatchi_sprite_sheet_4x.png" alt="Kuchipatchi sprite sheet" width="100%">
+  <img src="assets/极简绿色科技品牌标志.png" alt="Kuchipatchi sprite sheet" width="100%">
 </p>
 
-把好奇心变成作品，把想法打磨成好用的软件。
+AI AI AND AI。
 
-[探索项目 ↗](https://github.com/orgs/GorillaDevLab/repositories)
+[SEE MORE ↗](https://github.com/orgs/GorillaDevLab/repositories)
